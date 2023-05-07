@@ -13,22 +13,23 @@
 </head>
 <body>
     <nav class="navBar">
-        <img src="Images/Project_Logo.ico" class="Project-Logo"alt="Project_Logo">
+        <img src="Images/Project_Logo.ico" class="Project-Logo img-responsive"alt="Project_Logo">
         <ul class="nav-links">
-            <!-- <li class="nav-items "><a href="#">TV</a></li>
-            <li class="nav-items"><a href="#">Movies</a></li>
+            <li class="nav-items "><a href="#">Recommendations</a></li>
+            <li class="nav-items"><a href="#">Search    </a></li>
             <li class="nav-items"><a href="#">Sports</a></li>
-            <li class="nav-items"><a href="#">Premium</a></li> -->
+            <li class="nav-items"><a href="#">Premium</a></li>
         </ul>
-        
     </nav>
     <div class="Search-Bar">
         <div class="search-container">
-            <form action="/search">
-                    <input class="search-text" type="text" placeholder="Search Movie">
-                    <button class="search-button" type="submit"><span class="material-icons">search</span>
-                </div>
-              </form>
+            <div class="search-form">
+                <form action="/search">
+                        <input class="search-text" type="text" placeholder="Search Movie">
+                        <button class="search-button" type="submit"><span class="material-icons"><img src="Images/Search-icon.png"/></span></button>
+                    </div>
+                </form>  
+            </div>        
         </div>
     </div>
     <h1 class="latest-movies">Latest Movies</h1>
