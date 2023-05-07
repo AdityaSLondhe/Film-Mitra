@@ -9,14 +9,13 @@
 body{
     width: 100%;
     background: #0c111b;
-    position: relative;
     font-family: 'Roboto',sans-serif;
 }
 
 .navBar{
     width:100%;
     height: 80px;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     padding: 0 4%;  /* padding -> top right bottom left */
@@ -37,7 +36,13 @@ body{
 .nav-links{
     margin-top: 10px;
     display: flex;
+    width: 82%;
+    overflow: scroll;
     list-style: none; /*To remove small dots form list elements*/
+}
+
+.nav-items{
+    margin-left: 1%;
 }
 
 /* Align elements of navbar hyperlink List */
@@ -46,53 +51,42 @@ body{
     margin-left: 20px;
     text-transform: capitalize; /* To Capitalize the Text inside the link*/
     color: white;
-    opacity: 0.9; /*To control Visibility of the element*/
+    opacity: 0.7; /*To control Visibility of the element*/
 }
+.nav-items:hover ,.nav-items a:hover{
+    scale: calc(1.1);
+    opacity: 1;
+}
+
 .Search-Bar{
     height: 333px;
-    width: 1200px;
-    border-radius: 45px;
-    margin-top: 81px;
-    margin-left: 159px;
-    padding: 150px 475px;
-    background-image:radial-gradient(transparent,#0c111b 90%), url(Images/SearchBarBG.png);
+    width: 90%;
+    border-radius: 18px;
+    margin-top: 40px;
+    margin-left: 5%;
+    background-image:linear-gradient(to top,transparent,#0c111b 83%), url(Images/SearchBarBG.png);
 }
 .search-container{
-    height: 41px;
-    width: 250px; 
+    height: 12%;
+    width: 28%; 
     display: flex;
+    top: 44%;
+    margin-left: 41%;
     position: relative;
     transition:0.5s;
 }
-.search-box{
-    border:1px solid #d1d7e0; 
-    background:white;
-    position: relative;
-    box-shadow: 0px 0px 50px black;
-    text-align: center;
-    border-radius: 12px;
-    outline: none;
-    height: 40px;
-    color:#0c111b;
-    width: 260px;
-    text-transform: capitalize;
-    font-size: 16px;
-    font-weight: 700;
-    transition: 0.5s;   
+.search-form{
+    width: 100%;
+    height: 100%;
 }
 .search-text{
-    border: none;
     background:white;
     position: relative;
-    box-shadow: 0px 0px 50px black;
-    border-radius: 12px;
-    outline: none;
+    box-shadow: 5px 10px 8px black;
     height: 40px;
-    color:#0c111b;
-    width: 260px;
+    color: #7c1b77;
     text-transform: capitalize;
-    font-size: 16px;
-    font-weight: 700;
+    font-weight: 500;
     transition: 0.5s;   
 }
 .search-container:hover{
@@ -103,18 +97,21 @@ body{
     position: relative;
     margin-right: 250px;
     bottom: 40px;
+    box-shadow: 5px 10px 8px black;
+
 }
 button {
     background: none;
     border: none;
+    overflow: hidden;
     padding: 0;
   }
   
   .material-icons {
     font-family: 'Material Icons';
     font-weight: normal;
-    font-style: normal;
-    font-size: 24px;
+    font-style: italic;
+    font-size: 183%;
     line-height: 1;
     letter-spacing: normal;
     text-transform: none;
@@ -124,29 +121,33 @@ button {
     direction: ltr;
     /* -webkit-font-feature-settings: 'liga'; */
     -webkit-font-smoothing: antialiased;
+    opacity: 0.5;
   }
   
   input[type="text"] {
-    padding: 10px;
-    border: 2px solid #ccc;
+    padding: 19px;
+    border: 2px solid #9e3ab4;
     border-radius: 20px;
-    font-size: 16px;
-    width: 300px;
+    font-size: 128%;
+    width: 58%;
   }
-  
   button[type="submit"] {
-    width: 93px;
-    background: linear-gradient(to right,rgb(4, 4, 123),rgb(118, 118, 255));
+    width: 11%;
+    background: linear-gradient(to right,rgb(73, 63, 224),rgb(210, 37, 170));
     background-color: rgb(4, 4, 123)  ;
     color: white;
-    border-radius: 87px;
-    padding: 6px 17px;
+    border-radius: 25px;
+    padding: 6px;
     border: none;
     cursor: pointer;
-    height: 40px;
-    margin-left: 207px;
+    height: 100%;
+    margin-left: 47%;
+    margin-top: -1px;
   }
    
+  .material-icons:hover {
+    opacity: 1;
+  }
 
 .latest-movies{
     color: #fff;
@@ -275,11 +276,11 @@ button {
 }
 .pre-btn{
     left: 0;
-    background: linear-gradient(to right,#0c111b 0%, #0c111b00);
+    background: linear-gradient(to right,#0c111b 86%, #0c111b00);
 }
 .nxt-btn{
     right: 0;
-    background: linear-gradient(to left,#0c111b 0%, #0c111b00);
+    background: linear-gradient(to left,#0c111b 86%, #0c111b00);
 }
 .pre-btn img,
 .nxt-btn img{
