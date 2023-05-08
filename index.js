@@ -1,18 +1,18 @@
-let  cardContainers=[...document.querySelectorAll(".card-container")];
-let  preBtns=[...document.querySelectorAll(".pre-btn")];
-let  nxtBtns=[...document.querySelectorAll(".nxt-btn")];
+let cardContainers = [...document.querySelectorAll(".card-container")];
+let preBtns = [...document.querySelectorAll(".pre-btn")];
+let nxtBtns = [...document.querySelectorAll(".nxt-btn")];
 
-cardContainers.forEach((item,i)=>{
-    let containerDimensions=item.getBoundingClientRect();
-    let containerWidth=containerDimensions.width;
+cardContainers.forEach((item, i) => {
+  let containerDimensions = item.getBoundingClientRect();
+  let containerWidth = containerDimensions.width;
 
-    nxtBtns[i].addEventListener("click",()=>{
-        item.scrollLeft += containerWidth-200;
-    });
+  nxtBtns[i].addEventListener("click", () => {
+    item.scrollLeft += containerWidth - 200;
+  });
 
-    preBtns[i].addEventListener("click",()=>{
-        item.scrollLeft -=containerWidth-200;
-    });
+  preBtns[i].addEventListener("click", () => {
+    item.scrollLeft -= containerWidth - 200;
+  });
 });
 // let movies=[
 //     "images/poster 1.png",
@@ -34,4 +34,3 @@ cardContainers.forEach((item,i)=>{
 //     var SearchImg =movies[Math.floor(Math.random()*12)];
 //     document.querySelector(".Search-Bar").style.backgroundImage="uel("+SearchImg+")";
 // },1000);
-    
