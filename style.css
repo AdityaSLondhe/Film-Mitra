@@ -321,6 +321,7 @@ button[type="submit"] {
   font-size: 1.5vw;
   height: 23.5vw;
   padding: 0% 7% 0% 3%;
+
 }
 .film-info {
   width: 75%;
@@ -333,7 +334,91 @@ button[type="submit"] {
 .film-details td {
   padding-right: 35px;
 }
+/* ########################### */
+.recom-pg-body{
+  justify-content: space-around;
+  align-items: center;
+  animation: expand .8s ease forwards;
+  transition: all .8s ease;
+  /* overflow: hidden; */
+}
+.infopgTitle{
+  animation: expand .8s ease forwards;
+  transition: all .8s ease;
+}
+.film-info-container{
+  animation: slideIn 1.5s ease-in-out forwards;
+}
+.film-info{
+  overflow: hidden;
+}
+.film-details{
+  transform: translateY(300px);
+  animation: slideUp .8s ease-in-out forwards .8s;
+}
+.film-des-h1{
+  transform: translateY(300px);
+  animation: slideUp .8s ease-in-out forwards .8s;
+}
+.film-description{
+  scroll-behavior: smooth;
+  -ms-overflow-style:none;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  transform: translateY(300px);
+  animation: slideUp .8s ease-in-out forwards .8s;
+}
+.film-description::-webkit-scrollbar{
+  display: none;
+}
+.image-container{
+  animation: slideIn 1.5s ease-in-out forwards;
+}
+.info-title{
+  transform: translateY(300px);
+  animation: slideUp 1s ease-in-out forwards .1s;
+}
+.ifpg-rec-card-container{
+  transform: translateY(100px);
+  animation: expand .9s ease forwards .7s;
+}
+.info-card{
+  animation: opac .9s ease-in-out forwards 0s;
+}
 
+@keyframes slideIn {
+  0% {
+    transform: translateX(500px) scale(.2);
+  }
+  100% {
+    transform: translateX(0px) scale(1);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(300px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes expand {
+  0% {
+    transform: translateX(1400px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes opac{
+  0% {opacity: 0;}
+  80%{opacity: 0;}
+  100% {opacity: 1;}
+}
+
+/* ############################# */
 .image-container {
   margin-left: auto;
 }
@@ -343,7 +428,7 @@ button[type="submit"] {
   max-height: 360px;
   border-radius: 30px;
   object-fit: cover;
-  box-shadow: 0px 0px 21px;
+  box-shadow: 0px 0px 2vw;
 }
 
 .infopg-recom-list {
@@ -449,8 +534,33 @@ button[type="submit"] {
   overflow-y: visible;
   justify-items: center;
   scroll-behavior: smooth;
+  transform: translateY(300px);
+  animation: slideUp .9s ease-in-out forwards .1s;
 }
-
+ @keyframes recomOpac {
+  0%{opacity: 0;}
+  80%{opacity: .5;}
+  100%{opacity: 1;}
+ }
 .ifpg-rec-card-container::-webkit-scrollbar {
   display: none;
+}
+
+.recom-card {
+  position: relative;
+  min-width: 10vw;
+  width: 10vw;
+  height: auto;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px white;
+  background-color: white;
+  transition: 0.5s;
+  animation: recomOpac .9s ease-in-out forwards 0s;
+}
+.recom-card:hover {
+  transform: scale(1.1);
+}
+.recom-card:hover .info-card-body {
+  opacity: 1;
 }
