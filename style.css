@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:,wght@1,300&display=swap");
 * {
-  /* To remove default settings of browser */
   margin: 0%;
   padding: 0;
   box-sizing: border-box;
@@ -23,27 +22,23 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 0 4%; /* padding -> top right bottom left */
+  padding: 0 4%; 
   background: transparent; 
-  /* z-index to set    the depth of the navbar*/
   z-index: 9;
-  /* left to right content*/
   display: flex;
   align-items: center;
 }
 
-/* Logo size */
 .Project-Logo {
   height: 80px;
 }
 
-/* Align navbar hyperlink List*/
 .nav-links {
   margin-top: 10px;
   display: flex;
   width: 82%;
   overflow: hidden;
-  list-style: none; /*To remove small dots form list elements*/
+  list-style: none; 
 }
 
 .nav-items {
@@ -51,13 +46,12 @@ body {
   transition: 0.5s;
 }
 
-/* Align elements of navbar hyperlink List */
 .nav-items a {
-  text-decoration: none; /*To Stop changing colour of links*/
+  text-decoration: none;
   margin-left: 20px;
-  text-transform: capitalize; /* To Capitalize the Text inside the link*/
+  text-transform: capitalize; 
   color: white;
-  opacity: 0.7; /*To control Visibility of the element*/
+  opacity: 0.7;
 }
 .nav-items:hover,
 .nav-items a:hover {
@@ -98,7 +92,6 @@ body {
   transition: 0.5s;
 }
 .search-container:hover {
-  /* position: relative; */
   scale: calc(1.05);
 }
 .search-button {
@@ -126,7 +119,6 @@ button {
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
-  /* -webkit-font-feature-settings: 'liga'; */
   -webkit-font-smoothing: antialiased;
   opacity: 0.5;
 }
