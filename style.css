@@ -14,7 +14,6 @@ body {
   background: linear-gradient(to bottom, #0c111b 30%,#7c1b77);
   min-height: 635px;
   height: 69vw;
-
 }
 .navBar {
   width: 100%;
@@ -158,6 +157,8 @@ button[type="submit"] {
   text-shadow: 0px 6px 4px black;
   font-weight: 500;
   font-size: 2.5vw;
+  /*  */
+  animation: slideUp .8s ease-in-out forwards;
 }
 .movies-list {
   width: 100%;
@@ -176,6 +177,7 @@ button[type="submit"] {
   overflow-x: auto;
   overflow-y: visible;
   scroll-behavior: smooth;
+  animation: expand .9s ease forwards .7s;
 }
 
 .card-container::-webkit-scrollbar {
@@ -193,6 +195,7 @@ button[type="submit"] {
   background-color: white;
   margin-right: 10px;
   transition: 0.5s;
+  animation: opac .9s ease-in-out forwards 0s;
 }
 
 .card-img {
